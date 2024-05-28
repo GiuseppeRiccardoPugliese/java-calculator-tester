@@ -4,9 +4,39 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<!--
+POM è un file xml
+Ha 3 campi obbligatori
+1. groupId: identifica un'azienda o un macro-progetto
+2. artifactId: identifica il progetto
+3. version: versione del progetto (non sempre presente)
+-->
+
     <groupId>org.example</groupId>
     <artifactId>java-calculator-tester</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+<!--
+Nel POM possiamo definire l'insieme delle dependencies nel tag <dependencies>
+Ogni <dependency> ha i 3 campi:
+1. groupId
+2. artifactId
+3. version
+-->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+
+    <!-- Oltre alle informazioni di progetto e alle dependencies, nel POM possiamo
+    definire altre informazioni utili utilizzando il tag <properties> -->
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
